@@ -138,6 +138,7 @@ async def mensajecumple(ctx, amigo: discord.Member, *, mensaje):
 # Tarea que se ejecuta diariamente para verificar los cumpleaños
 @tasks.loop(seconds=60)
 async def check_birthdays():
+     print("Revisando cumpleaños...")
     today = datetime.datetime.now().strftime('%d/%m')
     in_one_week = (datetime.datetime.now() + datetime.timedelta(days=7)).strftime('%d/%m')
 
